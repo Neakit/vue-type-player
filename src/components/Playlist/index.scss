@@ -1,0 +1,23 @@
+.playlist {
+  border: 1px solid gray;
+
+  &__search {
+    //
+    margin-bottom: 8px;
+  }
+
+  &__items {
+    padding: 0px;
+    list-style: none;
+  }
+
+  &__item {
+    padding: 4px;
+    cursor: pointer;
+  }
+  &__item--active {
+    // background-color: #5b8a3c;
+    background-color: #77b55a;
+    color: white;
+  }
+}

@@ -1,0 +1,63 @@
+$spacing-scale: (
+  0,
+  0.3125rem,
+  0.625rem,
+  0.9375rem,
+  1.25rem,
+  1.5625rem,
+  3.125rem,
+  4.688rem,
+  6.25rem
+);
+
+@each $value in $spacing-scale {
+  $index: index($spacing-scale, $value) - 1;
+
+  .ma#{$index} {
+    margin: $value;
+  }
+  .mt#{$index} {
+    margin-top: $value;
+  }
+  .mb#{$index} {
+    margin-bottom: $value;
+  }
+  .ml#{$index} {
+    margin-left: $value;
+  }
+  .mr#{$index} {
+    margin-right: $value;
+  }
+  .mv#{$index} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+  .mh#{$index} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+
+  .pa#{$index} {
+    padding: $value;
+  }
+  .pt#{$index} {
+    padding-top: $value;
+  }
+  .pb#{$index} {
+    padding-bottom: $value;
+  }
+  .pl#{$index} {
+    padding-left: $value;
+  }
+  .pr#{$index} {
+    padding-right: $value;
+  }
+  .pv#{$index} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+  .ph#{$index} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+}

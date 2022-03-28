@@ -1,0 +1,28 @@
+$breakpoints: (
+  xs: 375px,
+  sm: 768px,
+  md: 1024px,
+  lg: 1280px,
+  xl: 1366px,
+);
+
+$container-sizes: (
+  xs: map-get($breakpoints, xs) - 25px,
+  sm: map-get($breakpoints, sm) - 40px,
+  md: map-get($breakpoints, md) - 200px,
+  lg: map-get($breakpoints, lg) - 240px,
+  xl: map-get($breakpoints, xl) - 300px,
+);
+
+.landing-container {
+  width: 100%;
+  padding: 12px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @each $breakpoint, $width in $breakpoints {
+    @media (min-width: $width) {
+      max-width: map-get($container-sizes, $breakpoint);
+    }
+  }
+}
